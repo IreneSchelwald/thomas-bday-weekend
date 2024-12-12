@@ -1,0 +1,201 @@
+/* Algemeen */
+body {
+  font-family: 'Funnel Sans', sans-serif;
+  margin-right: 20;
+  padding: 0;
+  background-color: #f0e6f6; /* Lichte paarse achtergrond */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+/* De uitnodigingskaart */
+.card {
+  position: relative;
+  width: 900px;
+  height: 400px;
+  perspective: 1000px; /* Zorgt voor 3D-effect bij draaien */
+    overflow: hidden; /* Zorgt ervoor dat inhoud niet buiten de kaart valt */
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  padding: 20px; /* Ruimte binnen de kaart */
+  padding-right: 20px;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  justify-content: flex-start; /* Begin bij de bovenkant als er veel inhoud is */
+}
+
+.card-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-back {
+  transform: rotateY(180deg); /* Start achterzijde van de kaart */
+  display: none; /* Start verborgen */
+  padding-top: 10px;
+  text-align: left;
+  overflow-y: scroll; /* Voeg een scrollbalk toe als er veel inhoud is */
+  max-height: 400px; /* Zorg ervoor dat de hoogte correct is */
+  padding-left:40px;
+ padding-right:40px;
+}
+
+.card-back:has(.scroll-arrow) .scroll-arrow.up {
+  display: block;
+}
+
+.scroll-arrow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5em;
+  color: #888;
+  z-index: 1;
+}
+
+.scroll-arrow.up {
+  top: 10px;
+  display: none; /* Verberg standaard totdat er gescrolld is */
+}
+
+.scroll-arrow.down {
+  bottom: 10px;
+}
+
+h1 {
+  font-family: 'Outfit', cursive;
+  font-size: 3rem;
+  color: #8b0000;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-family: 'Outfit', cursive;
+  font-size: 2rem;
+  color: #00000;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.intro {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.emoji-menu {
+  margin-top: 20px;
+}
+
+.emoji {
+  font-size: 2.5rem;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.emoji:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+}
+
+.back-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px;
+  color: #8b0000;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Animatie van de kaart draaien */
+.card.flip .card-front {
+  transform: rotateY(180deg);
+}
+
+.card.flip .card-back {
+  display: block;
+  transform: rotateY(0);
+}
+
+.list-basic-info{
+  text-align: left;
+}
+
+.hotel-info {
+  text-align: left;
+}
+
+.parkeerplaatsen-leer {
+  line-height: 1.8em;
+}
+
+.trein-list {
+  line-height: 2em;
+}
+
+.faq {
+  margin-top: 20px;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+
+.faq-toggle {
+  transition: transform 0.3s ease;
+  padding-right:40px;
+}
+
+.faq-answer {
+  max-height: 0; /* Begin met een hoogte van 0 */
+  overflow: hidden; /* Verberg de inhoud */
+  color: #666;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  padding: 0; /* Geen padding als verborgen */
+}
+
+.faq-item.open .faq-answer {
+  max-height: 200px; /* Genoeg hoogte voor het antwoord */
+  padding: 10px 0; /* Voeg padding toe als geopend */
+}
+
+.faq-item.open .faq-toggle {
+  transform: rotate(90deg); /* Draai het pijltje */
+}
+
+.lees-mij-list{
+  line-height:2em;
+  font-size:1.15em;
+  padding-right:20px;
+}
+
+.niet-vergeten{
+  line-height:1.5em;
+  font-size:1.03em;
+}

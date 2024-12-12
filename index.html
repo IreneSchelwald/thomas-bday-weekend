@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Thomas bday weekender</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verjaardagsuitnodiging</title>
+ <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Uitnodigingskaart -->
+    <div class="card" id="invitation-card">
+      <!-- Voorkant van de kaart -->
+      <div class="card-front">
+        <h1>Thomas Birthday Weekender</h1>
+        <p class="intro">Sletsgo Bitches!! 
+        Hier vind je alle info die je mogelijk dit weekend nodig gaat hebben. Je vindt het programma, basic info, wat te doen als het fout gaat en andere FAQ's.</p>
+        <div class="emoji-menu">
+          <span class="emoji" onclick="flipCard('read-me')">⚠️</span>
+          <span class="emoji" onclick="flipCard('info')">📅</span>
+          <span class="emoji" onclick="flipCard('details')">🚗</span>
+          <span class="emoji" onclick="flipCard('location')">🚂</span>
+          <span class="emoji" onclick="flipCard('schedule')">⁉️</span>
+          <span class="emoji" onclick="flipCard('contact')">🎒</span>
+        </div>
+      </div>
+
+      <!-- Achterkant van de kaart (initieel verborgen) -->
+      <div class="card-back" id="card-back">
+       <button class="back-btn" onclick="flipCardBack()">⬅️ Terug</button>
+        <div id="card-content">
+          <!-- Inhoud verandert dynamisch via JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
