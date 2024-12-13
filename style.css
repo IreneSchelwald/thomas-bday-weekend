@@ -12,6 +12,13 @@ body {
 
 .container {
   text-align: center;
+  display: flex;
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren */
+  width: 100%;
+  height: 100vh; /* Gebruik de volledige hoogte van het scherm */
+  padding: 10px; /* Zorg voor wat ruimte rond de kaart */
+  box-sizing: border-box;
 }
 
 /* De uitnodigingskaart */
