@@ -17,7 +17,7 @@ body {
 /* De uitnodigingskaart */
 .card {
   position: relative;
-  width: 900px;
+  width:700px;
   height: 400px;
   perspective: 1000px; /* Zorgt voor 3D-effect bij draaien */
     overflow: hidden; /* Zorgt ervoor dat inhoud niet buiten de kaart valt */
@@ -28,12 +28,17 @@ body {
   width: 100%;
   height: auto;
   padding: 20px; /* Ruimte binnen de kaart */
-  padding-right: 20px;
   backface-visibility: hidden;
   border-radius: 10px;
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   justify-content: flex-start; /* Begin bij de bovenkant als er veel inhoud is */
+    max-width: 100%; /* Zorg dat de inhoud niet breder is dan de kaart */
+  word-wrap: break-word; /* Breek woorden als ze te lang zijn */
+    max-height: 100%; /* Zorg dat de inhoud niet groter is dan de kaart */
+  overflow-y: auto; /* Voeg een scroll toe als nodig */
+   box-sizing: border-box;
 }
 
 .card-front {
