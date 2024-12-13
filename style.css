@@ -25,7 +25,7 @@ body {
 .card {
   position: relative;
   width:700px;
-  height: 400px;
+  height:400px;
   perspective: 1000px; /* Zorgt voor 3D-effect bij draaien */
     overflow: hidden; /* Zorgt ervoor dat inhoud niet buiten de kaart valt */
 }
@@ -53,6 +53,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow-y: auto;
 }
 
 .card-back {
