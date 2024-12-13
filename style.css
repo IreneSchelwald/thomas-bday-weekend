@@ -211,3 +211,15 @@ h2 {
   line-height:1.5em;
   font-size:1.03em;
 }
+
+.planning-thomas{
+  font-size: 1.1em;
+  line-height: 0.1em;
+  align-items: left;
+}
+
+.planning-thomas-lijst{
+  font-size: 0.9em;
+  line-height: 1em;
+  text-align: left;
+}

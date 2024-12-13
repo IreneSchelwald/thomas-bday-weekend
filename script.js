@@ -29,8 +29,8 @@ function flipCard(option) {
       break;
     case 'info':
      content = `
-    <h2>Basisinformatie</h2>
-    <p> Hier vind je de basisinformatie over de planning van het weekend. Mocht je iets niet kunnen vinden en/of ergens te laat komen, laat dat alsjeblieft aan Irene weten!! </p>
+    <h2>Planning</h2>
+    <p> Hier vind je de planning van het weekend. Mocht je iets niet kunnen vinden en/of ergens te laat komen, laat dat alsjeblieft aan Irene weten!! </p>
           <strong>Hotel:</strong> <a href="https://www.superbude.com/en/hotel-hamburg/st-georg/directions/">Superbude St. Georg </a>
       </p>
       <strong>Vrijdag 13 december </strong>
